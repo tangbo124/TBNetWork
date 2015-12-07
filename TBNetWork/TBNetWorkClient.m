@@ -30,6 +30,7 @@
 
 - (void)requestJsonDataWithMethod: (NSString *)method URL: (NSString *)url param: (id)param success: (void(^)(id data))success failure: (void(^)(id data, NSError *error))failure {
     NSLog(@"request url: %@, param: %@", url, param);
+    NSLog(@"tangbo");
     NSError *error = nil;
     NSMutableURLRequest *methodRequest = [self.manager.requestSerializer requestWithMethod:method URLString:url parameters:param error:&error];
     if (error) {
